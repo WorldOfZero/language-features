@@ -55,13 +55,15 @@ class Program
 
     /// Double all odd integers in a list
     /// Implemented using LINQ's fluent syntax
-    static IEnumerable<int> DoubleOddIntegersFluent(IEnumerable<int> ints) {
+    static IEnumerable<int> DoubleOddIntegersFluent(IEnumerable<int> ints)
+    {
         return ints.Where((value) => value % 2 == 1).Select((value) => value * 2);
     }
 
     /// Double all odd integers in a list
     /// Implemented using LINQ's query syntax
-    static IEnumerable<int> DoubleOddIntegersQuery(IEnumerable<int> ints) {
+    static IEnumerable<int> DoubleOddIntegersQuery(IEnumerable<int> ints)
+    {
         return (from value in ints
                 where value % 2 == 1
                 select value * 2);
